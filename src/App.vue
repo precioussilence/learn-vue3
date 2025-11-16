@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import CounterDemo from './components/CounterDemo.vue'
 import NameInput from './components/NameInput.vue'
+import TodoList from './components/TodoList.vue'
 
 const title = ref('计数器')
 const count = ref(0)
@@ -18,6 +19,7 @@ function increase() {
   </p>
   <NameInput></NameInput>
   <CounterDemo :title="title" :count="count" @increase="increase"></CounterDemo>
+  <TodoList></TodoList>
 </template>
 
 <style scoped></style>
