@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+import CounterDemo from './components/CounterDemo.vue'
 import NameInput from './components/NameInput.vue'
+
+const title = ref('计数器')
+const count = ref(0)
+function increase() {
+  count.value++
+}
 </script>
 
 <template>
@@ -9,6 +17,7 @@ import NameInput from './components/NameInput.vue'
     documentation
   </p>
   <NameInput></NameInput>
+  <CounterDemo :title="title" :count="count" @increase="increase"></CounterDemo>
 </template>
 
 <style scoped></style>
